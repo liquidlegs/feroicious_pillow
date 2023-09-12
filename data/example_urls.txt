@@ -1,0 +1,3 @@
+https://socradar.io/raccoon-stealer-resurfaces-with-new-enhancements/
+https://www.socinvestigation.com/threat-intelligence-dridex-malware-latest-iocs-2/
+https://www.securonix.com/blog/detecting-python-based-pyration-attack-campaign-with-securonix/
