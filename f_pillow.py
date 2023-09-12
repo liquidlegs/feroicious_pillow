@@ -6,7 +6,7 @@ REG_PARAGRAPH =     r">[\w ]+[\w !@#$%^&*()+-=\/]+<|<p>[\w ,\"\'-.]+|\/a>[\w !@#
 REG_HASHES =        r"[a-fA-F0-9]{64}|[a-fA-F0-9]{40}|[a-fA-F0-9]{32}"
 REG_M_HTTP =        r"[hxps]{4,5}[:\/\[\]]{3,5}[\w \[\]\.\/:]+|[htps]{4,5}[:\/\[\]]{3,5}[\w\/\[\]\. ]+\[\.\][\w:\/]+"
 # REG_M_HTTP =        r"[hxps]{4,5}[:\/\[\]]{3,5}[\w \[\]\.\/:]+"
-REG_M_IP =          r"\d{1,3}[\[\]\.]+\d{1,3}[\[\]\.]+\d{1,3}[\[\]\.]+\d{1,3}+[\w:\/.?=]+"
+REG_M_IP =          r"\d{1,3}[\[\]\.]+\d{1,3}[\[\]\.]+\d{1,3}[\[\]\.]+\d{1,3}[\w:\/\.?=]+"
 REG_M_DOMAIN =      r"[a-zA-Z]+[a-zA-Z\[\]\.]+\[\.\][a-zA-Z\/?=]+"
 
 
@@ -31,8 +31,11 @@ def remove_tags(data: str) -> str:
 def match_pattern(pattern: str, data: str) -> str:
   '''Matches all occourences of a regex pattern and returns the result.'''
   try:
-    out = re.findall(pattern, data)
+    comp = re.compile(pattern)
+    out = re.findall(comp, data)
     return out
+  except re.error:
+    return ""
   except AttributeError:
     return None    
 

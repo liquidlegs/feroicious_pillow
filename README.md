@@ -1,2 +1,39 @@
 # feroicious_pillow
 A proof of concept designed to extract links, text and IOCs from threat intel reports.
+
+Example commandline:
+```bash
+python3 f_pillow.py --url https://www.securonix.com/blog/detecting-python-based-pyration-attack-campaign-with-securonix/ -i -o pyration_report.txt
+```
+
+![1](assets/1.png)
+
+##### Results
+```bash
+06ecb59154d873889d92cead73238b5815358fa8a39c39868f735b24da0a3182
+fd78f398e7cc8ced62deba213e0218d780357bcf89e01b748f8ed1e252ac3b21
+c4cf65c95e68c6d610d8735d2922f89f98a6f37257b41ba01cf8179d5947298e
+4a32aa89a5250801c53d19370d98682e0561b642901bdd2987831bc983e0a544
+5f72c5dde7cba7071193ee7053e1adde5ea570f0c4192ac350f5835766060e5a
+6f8b208c3d4c1536ddf99304c880b939036a0725b1cc7fd44d768703da86fb68
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+142b485d45344ff03c056ebf1bfe25eaeb0496338b5b2e0bb64bfef1ff81c4e6
+fb592d344486d7c4d15df05ce58c84717b89dda7ae5bbd1aeccf49fbc7d47646
+24d66c7d5c6250403a957c282772b01c9edab85a29bcea8e0690ad7672f74ddf
+19c9c6c24a5f024e6469069ac8c1b0abae0ba50cb8e88b269d0a9a4c2a96265e
+3b445be3da961379b11af1fee71fe4513e10832f77727b3a8bbe2eb7bd60b5c3
+95d2c8e6109f0ce1afb4b9d902b2f88b48ca41c6713855f3d0bf77d869a5c9a4
+4d297ebe3b607eb88a6c30a74a0ad23272f44ffbcf2b49f72444048b78c6e1b4
+bba407734a2567c7e22e443ee5cc1b3a5780c9dd44c79b4a94d514449b0fd39a
+9501b38435b960d1a1f03785681345f9f215e9b799d3ae624b989df9e32e1b38
+180d61cbde7676c78b7b56b090f0c0d1ca5a69902ceaff26b0a1181351901011
+169[.]239.129.108:5555
+169[.]239.129.108:5555/socket.io/?transport=websocket
+169[.]239.129.108:5555/client/config
+169[.]239.129.108:5555/socket.io/?transport=polling
+files.secureway[.]fun
+api.safeit[.]com/install/log?error=
+install.realproheros[.]com
+login.secureway[.]fun
+api.realproheros[.]com
+```
